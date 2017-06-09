@@ -1,0 +1,80 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.candidate-item {
+    border: 1px;
+    border-radius: 5px;
+    border-color: #808080;
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+    border-style: solid;
+}
+
+    .candidate-item .title {
+        font-weight: bold;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .candidate-item span {
+        padding-left: 20px;
+        width: 100%;
+        float: left;
+    }
+
+.item-selected {
+    border: 1px solid #0094ff !important;
+    background-color:#faf7f7;
+}
+
+
+.candidate-details {
+    border: 1px;
+    border-radius: 5px;
+    border-color: #808080;
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+    border-style: solid;
+    padding: 5px;
+}
+
+    .candidate-details .name {
+        margin-bottom: 25px;
+        font-weight: bold;
+        padding-left: 28px;
+        margin-top: 25px;
+    }
+
+
+    .candidate-details span {
+        width: 100%;
+        float: left;
+    }
+
+    .candidate-details .candidate-skills {
+        padding: 15px;
+    }

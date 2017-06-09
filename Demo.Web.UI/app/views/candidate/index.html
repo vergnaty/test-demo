@@ -1,0 +1,49 @@
+﻿
+<!--header content-->
+<div class="row">
+    <div class="col-md-12">
+        <button style="margin-top:15px;float:left;" class="btn btn-primary btn-sm" ng-click="loadCandidates()">Load Candidates</button>
+        <div class="col-md-6" style="margin-top: 25px;">
+            <span style="padding-left:25px;" ng-show="candidates != null">{{candidates.Total}} candidate visible.</span>
+        </div>
+    </div>    
+</div>
+<hr />
+
+<div class="row">
+    <!--list of candidates-->
+    <div class="col-md-6">
+        <div class="candidate-item" ng-repeat="c in candidates.Data" ng-class="{'item-selected': selectedCandidate!= null && selectedCandidate.Id == c.Id }">
+            <a class="title" ng-click="selectCandidate(c.Id)">{{c.Name}}</a>
+            <span ng-bind-html="c.Salary"></span>
+            <span>{{c.MostRecentEmployment}}</span>
+            <span>{{c.CurrentLocation}}</span>
+        </div>
+    </div>
+    <!--Details of selected Candidate-->
+    <div class="col-md-6">
+        <div class="candidate-details" ng-show="selectedCandidate != null">
+            <div class="row">
+                <p class="name">{{selectedCandidate.Name}}</p>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <span ng-bind-html="selectedCandidate.Salary"></span>
+                        <span>{{selectedCandidate.MostRecentEmployment}}</span>
+                        <span>{{selectedCandidate.CurrentLocation}}</span>
+                    </div>
+                    <div class="col-md-6">
+                        <button style="margin-top:15px;" class="btn btn-default">Shortlist</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row candidate-skills">
+                <div class="col-md-12">
+                    <p><strong>Skills</strong></p>
+                    <span ng-repeat="skill in selectedCandidate.Skills">{{skill}}</span>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>
